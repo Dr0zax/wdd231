@@ -1,6 +1,6 @@
 # WDD 231 personal project
 
-https://grand-pastelito-37ca42.netlify.app/
+https://jpsnwdd231.netlify.app/
 
 ## Description
 
