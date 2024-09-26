@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+.recipes {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.recipe {
+    text-align: center;
+
+}
+.recipe img {
+    width: 300px;
+}
