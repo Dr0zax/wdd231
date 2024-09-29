@@ -310,7 +310,6 @@ svg {
 .info-card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   padding: 1em;
   width: 100%;
 }
