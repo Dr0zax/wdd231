@@ -24,4 +24,4 @@ function setParkInfoLinks(data) {
 
 setHeaderFooter(parkData);
 setParkIntro(parkData);
-setParkInfoLinks(parkInfoLinks)
+setParkInfoLinks(parkInfoLinks);
