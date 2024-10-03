@@ -103,7 +103,12 @@ body {
 
 main {
   margin: 0 auto;
-  max-width: 1140px;
+  max-width: 1200px;
+}
+
+p {
+  margin: 0;
+  font: var(--bs-body-font-family);
 }
 
 a:link,
@@ -114,6 +119,15 @@ a:visited {
 a:hover {
   color: var(--bs-link-hover-color);
 }
+
+.disclaimer {
+  background-color: var(--bs-light-green);
+  color: var(--bs-gray-700);
+  margin: 0;
+  padding: 1em;
+  text-align: center;
+}
+
 
 /* Skip links styling */
 .skip-links ul {
@@ -241,10 +255,6 @@ svg {
   font-size: 0.8rem;
 }
 
-.hero-info p {
-  margin: 0;
-}
-
 .hero-content {
   background-color: #000000B3;
   color: white;
@@ -297,10 +307,6 @@ svg {
   font-size: 2rem;
 }
 
-.intro p {
-  margin: 0;
-}
-
 .info {
   display: flex;
   flex-direction: column;
@@ -310,8 +316,15 @@ svg {
 .info-card {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   padding: 1em;
   width: 100%;
+}
+
+.info-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
 }
 
 .info-card a:link,
@@ -324,14 +337,17 @@ svg {
 }
 
 .info-card p {
-  margin: 0;
-  font-size: 1rem;
   color: var(--bs-grey-2);
 }
 
 #park-footer {
   background-image: url(/images/topo_pattern.png);
+}
+
+#park-footer .contact {
+  max-width: 1200px;
   padding: 20px;
+  margin: 0 auto;
 }
 
 #park-footer h3 {
@@ -341,10 +357,6 @@ svg {
 #park-footer h4 {
   font-family: var(--bs-font-sans-serif);
   margin: 20px 0 0 0;
-}
-
-#park-footer p {
-  margin: 0;
 }
 
 @media screen  and (min-width: 630px) {

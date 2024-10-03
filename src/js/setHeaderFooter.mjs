@@ -3,6 +3,9 @@ function setHeaderInfo(data) {
   disclaimer.href = data.url;
   disclaimer.innerHTML = data.fullName;
 
+  const parkTitle = document.querySelector(".title");
+  parkTitle.innerHTML = data.fullName;
+
   const heroContentContainer = document.querySelector(".hero-content");
   heroContentContainer.insertAdjacentHTML("afterbegin", parkInfoTemplate(data));
 
