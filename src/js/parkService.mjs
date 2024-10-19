@@ -37,6 +37,11 @@ export async function getVisitorCenterData() {
   return data.data[0];
 }
 
+export async function getAlerts() {
+  const data = await getJSON(`${baseUrl}/alerts?parkCode=yell`);
+  return data.data[0];
+}
+
 const parkInfoLinks = [
   {
     name: "Current Conditions &#x203A;",

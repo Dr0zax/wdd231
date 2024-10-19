@@ -84,6 +84,11 @@
   --bs-link-hover-color: #003e6b;
   --bs-code-color: #d63384;
   --bs-highlight-bg: #fff3cd;
+
+  --alert-closure: #cb2027;
+  --alert-caution: #ed7e31;
+  --alert-information: #2451a9;
+  --alert-danger: #720f04;
 }
 
 /* Global styles */
@@ -110,6 +115,11 @@ p {
   margin: 0;
   font: var(--bs-body-font-family);
 }
+
+/* h1, h2, h3, h4, h5, h6 {
+  font-family: var(--bs-font-serif);
+  font-weight: 700;
+} */
 
 a:link,
 a:visited {
@@ -312,13 +322,13 @@ svg {
   display: flex;
   flex-direction: column;
   gap: 1em;
+  padding: 1em;
 }
 
 .info-card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 1em;
   width: 100%;
 }
 
@@ -341,6 +351,10 @@ svg {
   color: var(--bs-grey-2);
 }
 
+.info-conditions {
+  padding: 1em;
+}
+
 #park-footer {
   background-image: url(/images/topo_pattern.png);
 }
@@ -358,6 +372,19 @@ svg {
 #park-footer h4 {
   font-family: var(--bs-font-sans-serif);
   margin: 20px 0 0 0;
+}
+
+.alert-information {
+  color: var(--alert-information);
+}
+.alert-danger {
+  color: var(--alert-danger);
+}
+.alert-closure {
+  color: var(--alert-closure);
+}
+.alert-caution {
+  color: var(--alert-caution);
 }
 
 @media screen  and (min-width: 1000px) {

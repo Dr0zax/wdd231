@@ -5,3 +5,9 @@ export function mediaCardTemplate(info) {
       <p>${info.description}</p>
       </div>`;
 }
+
+export function alertTemplate(info) {
+  `<div>
+    
+  </div>`;
+}
