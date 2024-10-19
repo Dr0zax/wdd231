@@ -32,14 +32,14 @@ export function getInfoLinks(data) {
   return withUpatedImages
 }
 
-export async function getVisitorCenterData() {
-  const data = await getJSON(`${baseUrl}/visitorcenters?parkCode=yell`);
-  return data.data[0];
+export async function getVisitorCenterData(parkCode) {
+  const data = await getJSON(`${baseUrl}/visitorcenters?parkCode=${parkCode}`);
+  return data.data;
 }
 
-export async function getAlerts() {
-  const data = await getJSON(`${baseUrl}/alerts?parkCode=yell`);
-  return data.data[0];
+export async function getAlerts(parkCode) {
+  const data = await getJSON(`${baseUrl}/alerts?parkCode=${parkCode}`);  
+  return data.data;
 }
 
 const parkInfoLinks = [
