@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+}
+
+.content {
+  width: 80%;
+  height: 500px;
+  border: 1px solid;
+}
+
+.red {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  /* animation: slideIn 1s ease; */
+  transition: background-color 500ms ease, border-radius 500ms ease;
+}
+
+.red:hover {
+    background-color: royalblue;
+    border-radius: 50%;
+}
+
+.yellow {
+  width: 100px;
+  height: 100px;
+  background-color: gold;
+  border-radius: 0 0 50% 50%;
+}
+
+.yellow:hover {
+    animation: rock 5s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+}
+
+.green {
+  width: 100px;
+  height: 40px;
+  background-color: green;
+  border: 0;
+}
+
+.green:hover + .blue {
+    height: 100px;
+    opacity: 1;
+}
+
+.blue {
+  width: 100px;
+  height: 0px;
+  opacity: 0;
+  background-color: blue;
+  transition: all 500ms ease;
+}
+
+.show {
+    height: 100px;
+    opacity: 1;
+    transition: all 500ms ease;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes rock {
+    0% {
+        transform: rotate(45deg);
+    }
+
+    25% {
+        transform: rotate(-45deg);
+    }
+
+    50% {
+        transform: rotate(45deg);
+    }
+
+    75% {
+        transform: rotate(-45deg);
+    }
+
+    100% {
+        transform: rotate(45deg);
+    }
+}

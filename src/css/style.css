@@ -204,8 +204,8 @@ svg {
 .global-header {
   background-color: var(--bs-black);
   color: white;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .global-header a:link,
@@ -222,6 +222,7 @@ svg {
 }
 
 .global-header__right {
+  justify-content: end;
   display: flex;
   align-items: center;
 }
@@ -240,6 +241,15 @@ svg {
   align-items: center;
   padding: 9px;
   font-size: 1rem;
+}
+
+.global-nav {
+  max-height: 50px;
+  transition: max-height 1s ease;
+}
+
+#global-nav-toggle:hover ~ .global-nav{
+  background-color: #003e6b;
 }
 
 .hero {
@@ -446,6 +456,6 @@ details ul li {
   }
 
   .global-header {
-    padding: .5rem 5rem;
+    padding: .5rem .5rem;
   }
 }
