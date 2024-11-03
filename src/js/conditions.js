@@ -34,4 +34,29 @@ function setActivities(data) {
     ativitiesContainer.insertAdjacentHTML("beforeend", html.join(""));
 }
 
+function enableNavigation() {
+    const menuButton = document.querySelector("#global-nav-toggle");
+    const globalNav = document.querySelector(".global-nav")
+    let menuOpen = false
+  
+    menuButton.addEventListener("click", (e) => {
+      let target = e.target;
+      globalNav.classList.toggle("show");
+  
+      if (target.tagName != "BUTTON") {
+        target = target.closest("button");
+      }
+      
+      if (!menuOpen) {
+        menuOpen = true;
+        target.setAttribute("aria-expanded", true);
+      } else {
+        menuOpen = false;
+        target.setAttribute("aria-expanded", false);
+      }
+  
+    });
+  }
+
 init();
+enableNavigation();

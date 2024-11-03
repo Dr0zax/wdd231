@@ -138,7 +138,6 @@ a:hover {
   text-align: center;
 }
 
-
 /* Skip links styling */
 .skip-links ul {
   list-style-type: none;
@@ -244,12 +243,47 @@ svg {
 }
 
 .global-nav {
-  max-height: 50px;
-  transition: max-height 1s ease;
+  width: 100%;
+  grid-column: 1/3;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s;
 }
 
-#global-nav-toggle:hover ~ .global-nav{
-  background-color: #003e6b;
+.global-nav.show {
+  max-height: 1000px;
+}
+
+.global-nav button {
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.global-nav__toggle:hover {
+  cursor: pointer;
+}
+
+.global-nav svg {
+  --icon-color: white;
+}
+
+.global-nav__toggle--closed {
+  display: none;
+  align-items: center;
+}
+
+.global-nav__toggle--open {
+  display: flex;
+  align-items: center;
+}
+
+.global-nav__toggle[aria-expanded="true"] .global-nav__toggle--closed{
+  display: flex;
+}
+
+.global-nav__toggle[aria-expanded="true"] .global-nav__toggle--open {
+  display: none;
 }
 
 .hero {
