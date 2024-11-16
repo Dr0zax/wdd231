@@ -1,3 +1,5 @@
+import { ennableNavigation } from "./navigation.mjs";
+
 function setHeaderInfo(data) {
   const disclaimer = document.querySelector(".disclaimer-link");
   disclaimer.href = data.url;
@@ -56,4 +58,5 @@ function getVoicePhone(phoneNumbers) {
 export function setHeaderFooter(data) {
   setHeaderInfo(data);
   setParkFooter(data);
+  ennableNavigation();
 }

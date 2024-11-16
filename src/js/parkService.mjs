@@ -19,7 +19,7 @@ async function getJSON(url) {
 }
 
 export async function getParkData() {
-  const data = await getJSON(`${baseUrl}/parks?parkCode=yell`);
+  const data = await getJSON(`${baseUrl}/parks?parkCode=glac`);
   return data.data[0];
 }
 
