@@ -42,6 +42,11 @@ export async function getAlerts(parkCode) {
   return data.data;
 }
 
+export async function getParkVisitorCenterDetails(id) {
+  const data = await getJSON(`${baseUrl}/visitorcenters?id=${id}`);
+  return data.data[0];
+}
+
 const parkInfoLinks = [
   {
     name: "Current Conditions &#x203A;",
@@ -56,7 +61,7 @@ const parkInfoLinks = [
   },
   {
     name: "Visitor Centers &#x203A;",
-    link: "visitor_centers.html",
+    link: "visitor-center.html",
     description: "Learn about the visitor centers in the park."
   }
 ];

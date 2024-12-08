@@ -121,6 +121,11 @@ h1 {
   font-size: 2em;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 a:link,
 a:visited {
   color: var(--bs-link-color);
@@ -559,20 +564,136 @@ details {
   padding: 1em;
 }
 
-details ul {
+.activities details ul {
   margin: 0;
   padding: 0;
 }
 
-details ul li {
+.activities details ul li {
   padding: 0.5rem 0 0.8rem 0;
   border-bottom: 1px solid var(--bs-grey-3);
   list-style: none;
 }
 
-details ul li:last-of-type {
+.activities details ul li:last-of-type {
   border-bottom: none;
 }
+
+/* visitor-center.html */
+
+.center-name {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.15em;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+  border-bottom: 1px solid var(--bs-gray-400);
+}
+
+.center-name svg {
+  width: 30px;
+  height: 30px;
+  fill: black;
+}
+
+.center-info {
+  display: flex;
+  flex-direction: column;
+  gap: .5em;
+  margin-bottom: 0.8em;
+}
+
+.center-info image {
+  width: 100%;
+}
+
+.center-info figure {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1em 3em;
+}
+
+.center-info figcaption {
+  font-size: 0.8em;
+}
+
+.center-info figcaption > span {
+  display: block;
+  font-size: 0.8em;
+  font-style: italic;
+}
+
+
+
+.center-info-list summary {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-transform: uppercase;
+  position: relative;
+  cursor: pointer;
+}
+
+.center-info-list summary::marker,
+.center-info-list summary::-webkit-details-marker {
+  display: none;
+}
+
+.center-info-list summary::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  background-image: url(../images/arrow.svg);
+  background-position: 0 0;
+  background-size: 1.25rem 1.25rem;
+  background-repeat: no-repeat;
+  transition: transform 250ms ease 0s;
+}
+
+.center-info-list details[open]  > summary::after {
+  transform: rotate(180deg);
+}
+
+.center-info-list svg,
+.center-gallery svg {
+  width: 30px;
+  height: 30px;
+  margin-right: 1rem;
+  fill: black;
+}
+
+#center-amenities ul {
+  list-style: none;
+}
+
+#center-amenities li {
+  margin-bottom: 1em;
+}
+
+.center-gallery > h2 {
+  text-transform: uppercase;
+  font-size: 1.25em;
+}
+
+.center-gallery ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.center-gallery img {
+  width: 256px;
+  height: 256px;
+  object-fit: cover;
+  object-position: center;
+}
+
+
 
 @media screen  and (min-width: 1000px) {
   .info {
