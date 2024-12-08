@@ -200,10 +200,6 @@ a:hover {
   overflow: hidden;
 }
 
-.icon {
-  fill: white;
-}
-
 .global-header {
   background-color: var(--bs-black);
   color: white;
@@ -263,7 +259,12 @@ a:hover {
 }
 
 .global-nav svg {
+  fill: white;
   --icon-color: white;
+}
+
+.global-nav__toggle .icon {
+  fill: white;
 }
 
 .global-nav__toggle--closed {
@@ -663,7 +664,7 @@ details {
   width: 30px;
   height: 30px;
   margin-right: 1rem;
-  fill: black;
+  fill: black!important;
 }
 
 #center-amenities ul {
